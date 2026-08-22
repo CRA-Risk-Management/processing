@@ -1,10 +1,12 @@
-def rio_magdalena_tebsa_bquilla(l: float, limit: float = 0.05) -> float:
-    """
-    Predict the water level for the TEBSA station in Barranquilla on the Magdalena River.
+"""Hydrological predictive models for water level stations."""
+
+
+def rio_magdalena_tebsa_bquilla(level: float, limit: float = 0.05) -> float:
+    """Predict water level for TEBSA station in Barranquilla on Magdalena River.
 
     Parameters
     ----------
-    l : float
+    level : float
         The reference water level.
     limit : float, optional
         Minimum limit for the predicted level, by default 0.05.
@@ -13,21 +15,20 @@ def rio_magdalena_tebsa_bquilla(l: float, limit: float = 0.05) -> float:
     -------
     float
         The predicted water level.
+
     """
-    predicted_l = -0.550 + 0.287 * l
-    if predicted_l > limit:
-        return predicted_l
-    else:
-        return limit
+    predicted_level = -0.550 + 0.287 * level
+    if predicted_level > limit:
+        return predicted_level
+    return limit
 
 
-def rio_magdalena_sitio_nuevo(l: float, limit: float = 0.230) -> float:
-    """
-    Predict the water level for the Sitio Nuevo station on the Magdalena River.
+def rio_magdalena_sitio_nuevo(level: float, limit: float = 0.230) -> float:
+    """Predict water level for Sitio Nuevo station on Magdalena River.
 
     Parameters
     ----------
-    l : float
+    level : float
         The reference water level.
     limit : float, optional
         Minimum limit for the predicted level, by default 0.230.
@@ -36,21 +37,20 @@ def rio_magdalena_sitio_nuevo(l: float, limit: float = 0.230) -> float:
     -------
     float
         The predicted water level.
+
     """
-    predicted_l = -0.795 + 0.456 * l
-    if predicted_l > limit:
-        return predicted_l
-    else:
-        return limit
+    predicted_level = -0.795 + 0.456 * level
+    if predicted_level > limit:
+        return predicted_level
+    return limit
 
 
-def canal_dique_villa_rosa(l: float, limit: float = 0.10) -> float:
-    """
-    Predict the water level for the Villa Rosa station on the Canal del Dique.
+def canal_dique_villa_rosa(level: float, limit: float = 0.10) -> float:
+    """Predict water level for Villa Rosa station on Canal del Dique.
 
     Parameters
     ----------
-    l : float
+    level : float
         The reference water level.
     limit : float, optional
         Minimum limit for the predicted level, by default 0.10.
@@ -59,9 +59,9 @@ def canal_dique_villa_rosa(l: float, limit: float = 0.10) -> float:
     -------
     float
         The predicted water level.
+
     """
-    predicted_l = -0.18 * l + l
-    if predicted_l > limit:
-        return predicted_l
-    else:
-        return limit
+    predicted_level = -0.18 * level + level
+    if predicted_level > limit:
+        return predicted_level
+    return limit
