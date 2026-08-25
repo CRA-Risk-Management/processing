@@ -12,10 +12,11 @@ classifiers = [
     "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
-    "pandas (>=3.0.0)",
-    "statsmodels (>=0.14.0)",
-    "matplotlib (>=3.11.0)",
-    "prepare-wfs-data (>=0.1.2)",
+    "pandas>=3.0.0",
+    "statsmodels>=0.14.0",
+    "matplotlib>=3.11.0",
+    "prepare-wfs-data>=0.1.2",
+    "requests>=2.34.2",
 ]
 
 [tool.hatch.build.targets.sdist]
